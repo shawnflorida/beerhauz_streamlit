@@ -11,7 +11,7 @@ def show_login():
     login_email = st.text_input("Email")
     login_password = st.text_input("Password", type="password")
     
-    col1, col2 = st.columns([3.8, 1])
+    col1, col2 = st.columns([14, 3.8])
     with col1:
         if st.button("Login"):
             try:
@@ -33,7 +33,6 @@ def show_login():
 
     # Add a divider and link to signup
     st.divider()
-    st.write("Don't have an account?")
-    if st.button("Go to Sign Up"):
+    if st.button("📝 Go to Sign Up"):
         st.session_state.current_page = "SignUp"
         st.rerun()

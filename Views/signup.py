@@ -11,26 +11,26 @@ def show_signup():
 
     st.markdown("## 📝 Create Your Account")
 
-    # Test data button
-    with st.expander("🔧 Developer Tools", expanded=False):
-        if st.button("Auto-fill with test data"):
-            test_email = f"testuser_{uuid.uuid4().hex[:8]}@example.com"
-            st.session_state.update({
-                "email": test_email,
-                "password": "TestPassword123!",
-                "first_name": "Test",
-                "last_name": "User",
-                "company": "Test Corp",
-                "position": "Tester",
-                "phone": "123-456-7890",
-                "street": "123 Test St",
-                "city": "Testville",
-                "state": "TS",
-                "zip_code": "12345",
-                "country": "Testland",
-                "bio": "This is a test user profile for testing purposes.",
-                "skills": "testing, python, streamlit"
-            })
+    # # Test data button
+    # with st.expander("🔧 Developer Tools", expanded=False):
+    #     if st.button("Auto-fill with test data"):
+    #         test_email = f"testuser_{uuid.uuid4().hex[:8]}@example.com"
+    #         st.session_state.update({
+    #             "email": test_email,
+    #             "password": "TestPassword123!",
+    #             "first_name": "Test",
+    #             "last_name": "User",
+    #             "company": "Test Corp",
+    #             "position": "Tester",
+    #             "phone": "123-456-7890",
+    #             "street": "123 Test St",
+    #             "city": "Testville",
+    #             "state": "TS",
+    #             "zip_code": "12345",
+    #             "country": "Testland",
+    #             "bio": "This is a test user profile for testing purposes.",
+    #             "skills": "testing, python, streamlit"
+    #         })
 
     # Authentication Info
     st.subheader("🔐 Account Credentials")
@@ -123,6 +123,6 @@ def show_signup():
 
     # Footer
     st.markdown("---")
-    if st.button("Already have an account?"):
+    if st.button("👀 Already have an account?"):
         st.session_state.current_page = "Login"
         st.rerun()
