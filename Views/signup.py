@@ -10,28 +10,6 @@ def show_signup():
     storage_bucket = get_storage()
 
     st.markdown("## 📝 Create Your Account")
-
-    # # Test data button
-    # with st.expander("🔧 Developer Tools", expanded=False):
-    #     if st.button("Auto-fill with test data"):
-    #         test_email = f"testuser_{uuid.uuid4().hex[:8]}@example.com"
-    #         st.session_state.update({
-    #             "email": test_email,
-    #             "password": "TestPassword123!",
-    #             "first_name": "Test",
-    #             "last_name": "User",
-    #             "company": "Test Corp",
-    #             "position": "Tester",
-    #             "phone": "123-456-7890",
-    #             "street": "123 Test St",
-    #             "city": "Testville",
-    #             "state": "TS",
-    #             "zip_code": "12345",
-    #             "country": "Testland",
-    #             "bio": "This is a test user profile for testing purposes.",
-    #             "skills": "testing, python, streamlit"
-    #         })
-
     # Authentication Info
     st.subheader("🔐 Account Credentials")
     email = st.text_input("📧 Email", value=st.session_state.get("email", ""), placeholder="you@example.com")
